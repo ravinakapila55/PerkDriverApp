@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+
+    >
+
+
+            <ImageView
+                android:background="@android:color/transparent"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@mipmap/ic_back_black"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/img_back_btn"
+                android:layout_centerVertical="true"
+                />
+
+
+    <com.app.perk99driver.custom.CustomTextViewRegular
+
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/_5sdp"
+        android:text="Order"
+        android:textColor="@color/app_black"
+        android:textSize="@dimen/_15ssp" />
+</RelativeLayout>

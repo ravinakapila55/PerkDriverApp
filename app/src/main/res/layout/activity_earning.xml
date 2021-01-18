@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".help.HelpActivity">
+    <include
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/header_small"/>
+
+
+    <ImageView
+        android:id="@+id/img_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@mipmap/ic_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+
+
+    <com.app.perk99driver.custom.CustomTextViewSemiBold
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_help"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:textColor="@color/app_black"
+        android:text="Total Earning"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16ssp"
+        />
+
+    <com.app.perk99driver.custom.CustomTextViewLight
+        android:id="@+id/tvFund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/light_black"
+        android:text="$ 100"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+        />
+
+    <com.app.perk99driver.custom.CustomTextViewRegular
+        android:id="@+id/tvRequestWithdrawLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFund"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/app_black"
+        android:text="Request Withdraw"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16ssp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccWithdraw"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestWithdrawLabel"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ccEdit"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/gray_stroke_solid_white"
+            android:layout_marginTop="6dp">
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="@dimen/_5sdp"
+                android:maxLength="6"
+                android:hint="Amount.."
+                android:textSize="14sp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/rlButtons"
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/app_white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_brown"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ccEdit"
+            android:padding="@dimen/_5sdp"
+            android:text="Send" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_help_bottom"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

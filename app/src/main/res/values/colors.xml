@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#eb511d</color>lo
+    <color name="colorAccent">#eb511d</color>
+
+
+    <color name="app_color">#0f1010</color>
+    <color name="app_black">#272727</color>
+    <color name="app_white">#FFFFFF</color>
+    <color name="stroke">#c1c1c1</color>
+    <color name="edt_color">#666666</color>
+    <color name="light_black">#353b3e</color>
+    <color name="txt_light">#929494</color>
+    <color name="custom_bg">#f0f0f0</color>
+    <color name="btn_color">#4f2f11</color>
+    <color name="app_orange">#eb511d </color>
+    <color name="app_orange_light">#A8EB511D</color>
+    <color name="hint_color">#999999</color>
+    <color name="txt_color">#222222</color>
+    <color name="para_txt_color">#a7a6b2</color>
+    <color name="day_trans">#ebebf0</color>
+    <color name="navi_side">#e8e8e8</color>
+    <color name="lighter_gray">#5BE2DFDF</color>
+    <color name="dustYellow">#ffd700</color>
+
+    <color name="transparent_black">#78000000</color>
+</resources>

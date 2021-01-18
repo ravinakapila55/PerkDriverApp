@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!--1. accept or Reject ...-->
+    <LinearLayout
+        android:id="@+id/lnrAcceptOrReject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/lnr_go_pick_up_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:cardElevation="@dimen/_5sdp">
+
+
+                <!--1. pickup or Reject ...-->
+                <LinearLayout
+                    android:id="@+id/lnr_pickUp_cancle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.app.perk99driver.custom.CustomTextViewSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order Detail"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textColor="@color/app_black"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:background="@android:color/transparent"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/navigation"
+                            android:tint="@color/app_orange"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:visibility="visible"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:id="@+id/iv_navigation_option"
+                            />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@mipmap/ic_driver_pic_on"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+
+                                android:weightSum="2">
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Drop Off"
+                                    android:textColor="@color/txt_light"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:id="@+id/txt_pick_location_pic"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Mohali Chandigarh"
+                                    android:textColor="@color/app_black"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+
+                                android:weightSum="2">
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Order Ref no"
+                                    android:textColor="@color/txt_light"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                    android:id="@+id/txt_order_refernce"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="09827682292"
+                                    android:textColor="@color/app_black"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+
+                                android:weightSum="2">
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Payment Method"
+                                    android:textColor="@color/txt_light"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                                <RelativeLayout
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+
+                                    >
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:id="@+id/txt_pay_method"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="WALLET"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_toRightOf="@+id/txt_pay_method"
+                                        android:src="@mipmap/ic_blue_tick" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+
+                                android:weightSum="2">
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Distance"
+                                    android:textColor="@color/txt_light"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                    android:id="@+id/txt_distance_pick"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="10 Mi"
+                                    android:textColor="@color/app_black"
+                                    android:textSize="@dimen/_11ssp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+
+                                android:weightSum="2">
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="Total Fare:"
+                                    android:textColor="@color/txt_light"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                                <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                    android:id="@+id/txt_est_fare"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="$ 10"
+                                    android:textColor="@color/app_black"
+                                    android:textSize="@dimen/_11ssp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@color/txt_light"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+
+                        <com.app.perk99driver.custom.CustomButtonTextRegular
+                            android:id="@+id/btn_complete_ride"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:gravity="center"
+                            android:text="Confirm Delivery"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_white"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

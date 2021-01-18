@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Perk99(Driver)</string>
+    <string name="google_maps_key">AIzaSyBmWazR3xu1lTVRFXyuhSjyVnZH8nRnsG0</string>
+
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="are_you_sure_want_logout">Are you sure you want to Logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_internet">No Internet Available</string>
+    <string name="please_enter_email_address">Please enter Email Address</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="enter_valid_email">Please enter valid Email Address</string>
+    <string name="val_min_6_char">Password should be at least 6 characters long</string>
+    <string name="please_enter_user_name">Please enter first name</string>
+    <string name="please_enter_last_name">Please enter last name</string>
+    <string name="please_enter_valid_user_name">Please enter valid username</string>
+    <string name="please_enter_phone_number">Please enter Phone Number</string>
+    <string name="please_enter_valid_number">Please enter valid Phone Number</string>
+    <string name="please_enter_address">Please enter Address</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="login">Login</string>
+    <string name="choose_plan">Choose Plan</string>
+    <string name="server_error">Server Error</string>
+    <string name="select_pick_up_time">Select Pick Up Time</string>
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="location">Location</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="go_online">GO Online</string>
+    <string name="go_offline">GO Offline</string>
+    <string name="you_are_now_offline">You are now offline!</string>
+    <string name="you_are_now_online">You are now Online!</string>
+</resources>

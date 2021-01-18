@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".help.HelpActivity">
+    <include
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/header_small"/>
+
+
+    <ImageView
+        android:id="@+id/img_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@mipmap/ic_message_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+
+
+<com.app.perk99driver.custom.CustomTextViewSemiBold
+    android:id="@+id/txt_need_some_help"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/img_help"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:textColor="@color/app_black"
+    android:text="Need some help?"
+    android:textStyle="bold"
+    android:textSize="@dimen/_16ssp"
+
+></com.app.perk99driver.custom.CustomTextViewSemiBold>
+
+    <com.app.perk99driver.custom.CustomTextViewLight
+        android:id="@+id/txt_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/txt_light"
+        android:text="    Don't know how to use?\nfeel free to get in touch with us "
+
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_need_some_help"
+        ></com.app.perk99driver.custom.CustomTextViewLight>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_35sdp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_need"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <com.app.perk99driver.custom.CustomButtonTextRegular
+            android:id="@+id/btContact"
+            style="@style/app_button"
+            android:layout_centerHorizontal="true"
+            android:text="Contact Us" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_help_bottom"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

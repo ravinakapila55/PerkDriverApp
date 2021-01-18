@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "713429729987",
+    "firebase_url": "https://perksquare.firebaseio.com",
+    "project_id": "perksquare",
+    "storage_bucket": "perksquare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713429729987:android:c29d3bef7109a4d7dc1876",
+        "android_client_info": {
+          "package_name": "com.app.perk99driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuuqbLBtQG8U4aKkH-R7DtzVDJdGGB2kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713429729987-vrkaeqojjuggn2rt00bovjhjt02h40kk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Perks99"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713429729987:android:34430cfcce6b3969dc1876",
+        "android_client_info": {
+          "package_name": "com.app.perk99restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuuqbLBtQG8U4aKkH-R7DtzVDJdGGB2kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713429729987-vrkaeqojjuggn2rt00bovjhjt02h40kk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Perks99"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713429729987:android:d4f020e762cbaf18dc1876",
+        "android_client_info": {
+          "package_name": "com.app.perks99"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuuqbLBtQG8U4aKkH-R7DtzVDJdGGB2kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713429729987-16ulmomovaj10rlrocfpk6q9d0bkior6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713429729987-vrkaeqojjuggn2rt00bovjhjt02h40kk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Perks99"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

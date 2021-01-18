@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:orientation="vertical">
+
+
+   <!-- <include
+        android:id="@+id/toolbar"
+        layout="@layout/header_small"
+        />-->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Map Layout ...-->
+
+        <LinearLayout
+            android:id="@+id/lnrMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/provider_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <!--1. Search ...-->
+
+
+        <!--Main Layout here to handle the MyLOcation GPS ICON added here-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            // lnr_accept_reject
+            <LinearLayout
+                android:id="@+id/lnr_accept_reject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    card_view:cardElevation="@dimen/_5sdp">
+
+
+                    <!--1. accept or Reject ...-->
+                    <LinearLayout
+                        android:id="@+id/lnrAcceptOrReject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/imgUser01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:src="@mipmap/ic_pick" />
+
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Pick Up:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_pick_location"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Mohali Chandigarh"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Drop off:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_drop_off"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Chandigarh india"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Total Distance:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_distance"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="10 Mi"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Est. Fare:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_est_fare"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="$ 10"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@color/txt_light"></View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:layout_weight="2"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+
+
+                            <com.app.perk99driver.custom.CustomButtonTextRegular
+                                android:id="@+id/btn_ignore"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg_tran"
+                                android:text="Ignore Job"
+                                android:layout_weight="1"
+                                android:textColor="@color/app_black"
+                                android:textSize="@dimen/_12ssp" />
+
+
+                            <com.app.perk99driver.custom.CustomButtonTextRegular
+                                android:id="@+id/btn_accept"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg"
+
+                                android:gravity="center"
+                                android:text="Accept Job"
+                                android:textColor="@color/app_white"
+                                android:textSize="@dimen/_13sdp" />
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+// offline online
+            <LinearLayout
+                android:id="@+id/lnr_offline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                 android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    card_view:cardElevation="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@mipmap/ic_driver_pic_on"></ImageView>
+
+                    <com.app.perk99driver.custom.CustomTextViewRegular
+                        android:id="@+id/txt_online_offline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                       android:gravity="center"
+                        android:text="@string/you_are_now_offline"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/app_black"
+                        ></com.app.perk99driver.custom.CustomTextViewRegular>
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_book_ride"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        >
+
+                        <com.app.perk99driver.custom.CustomButtonTextRegular
+                            android:id="@+id/btn_online_offline"
+                            style="@style/app_button"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/go_online" />
+
+                    </RelativeLayout>
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lnr_go_pick_up_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    card_view:cardElevation="@dimen/_5sdp">
+
+
+                    <!--1. pickup or Reject ...-->
+                    <LinearLayout
+                        android:id="@+id/lnr_pickUp_cancle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@mipmap/ic_driver_pic_on"/>
+
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Pick Up:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_pick_location_pic"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Mohali Chandigarh"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Order Ref no"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+
+                                        android:id="@+id/txt_order_refernce"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="09827682292"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Distance"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+
+
+
+
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:id="@+id/txt_distance_pick"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="10 Mi"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="Est. Fare:"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:id="@+id/txt_fare"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="$ 10"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:weightSum="2"
+
+                                    android:orientation="horizontal">
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="ETA"
+                                        android:textColor="@color/txt_light"
+                                        android:textSize="@dimen/_11ssp"/>
+
+                                    <com.app.perk99driver.custom.CustomTextViewRegular
+                                        android:id="@+id/txt_est_time"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:lineSpacingMultiplier="1.5"
+                                        android:text="23 Mins"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/app_black"
+                                        android:textSize="@dimen/_11ssp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@color/txt_light"></View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:layout_weight="2"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+
+
+                            <com.app.perk99driver.custom.CustomButtonTextRegular
+                                android:id="@+id/btn_cancel_job"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg_tran"
+                                android:text="Cancel Job"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/app_black"
+                                android:textSize="@dimen/_12ssp" />
+
+
+                            <com.app.perk99driver.custom.CustomButtonTextRegular
+                                android:id="@+id/btn_pick_up"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg"
+                                android:textAllCaps="false"
+                                android:gravity="center"
+                                android:text="Go To Pick Up"
+                                android:textColor="@color/app_white"
+                                android:textSize="@dimen/_12sdp" />
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnr_pick_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    card_view:cardElevation="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.app.perk99driver.custom.CustomTextViewRegular
+                            android:id="@+id/txt_pick_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Drop Up- 10 mins to arrival"
+                            android:textSize="@dimen/_13ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/app_black"
+                            />
+
+
+                        <com.app.perk99driver.custom.CustomTextViewRegular
+                            android:id="@+id/txt_pick_up_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_pick_up"
+                            android:text="Loreum Loreum "
+                            android:textSize="@dimen/_14ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/app_black"
+                            />
+
+
+
+                            <ImageView
+                                android:id="@+id/ivCall"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_15sdp"
+                                android:src="@mipmap/ic_call"/>
+
+                        </RelativeLayout>
+
+
+
+                        <com.app.perk99driver.custom.CustomTextViewRegular
+                            android:id="@+id/txt_view_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="View Detail"
+                            android:textSize="@dimen/_13ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/app_orange"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rel_pick_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            >
+
+                            <com.app.perk99driver.custom.CustomButtonTextRegular
+                                android:id="@+id/btn_pick_up_door"
+                                style="@style/app_button"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_centerHorizontal="true"
+                                android:text="Cancel" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/ic_arc_header"
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+
+            >
+
+
+            <ImageView
+                android:background="@android:color/transparent"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@mipmap/ic_arrow"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/img_back_btn"
+                android:layout_centerVertical="true"
+                />
+
+
+            <com.app.perk99driver.custom.CustomTextViewRegular
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:text="Profile"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/app_white"
+                android:id="@+id/txt_header"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70sdp"
+            app:layout_constraintTop_toTopOf="parent"
+android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:cardElevation="6dp"
+
+            >
+            <LinearLayout
+                android:id="@+id/textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:orientation="vertical"
+
+                >
+                <FrameLayout
+                    android:id="@+id/rel_pic"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/circle_shape"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:id="@+id/progress_bar"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:src="@drawable/ic_dummy_profile"
+
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/oval_red_shape">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+
+                            android:src="@drawable/digital_camera_shape"></ImageView>
+
+
+                    </RelativeLayout>
+
+
+
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/edt_txtbg"
+                    >
+
+                    <com.app.perk99driver.custom.CustomEditTextRegular
+                        android:id="@+id/edt_fst_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:gravity="center"
+                        android:hint="@string/first_name"
+                        android:textColorHint="@color/hint_color"
+
+                        android:textSize="@dimen/_12ssp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/edt_txtbg"
+                    >
+
+                    <com.app.perk99driver.custom.CustomEditTextRegular
+                        android:id="@+id/edt_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:gravity="center"
+                        android:hint="@string/last_name"
+                        android:textColorHint="@color/hint_color"
+
+                        android:textSize="@dimen/_12ssp" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/edt_txtbg"
+                    >
+
+                    <com.app.perk99driver.custom.CustomEditTextRegular
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:gravity="center"
+                        android:hint="Email"
+                        android:textColorHint="@color/hint_color"
+
+                        android:textSize="@dimen/_12ssp" />
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+
+
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_phone_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_36sdp"
+                        android:background="@drawable/edt_txtbg">
+
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/cc"
+                            app:ccp_defaultPhoneCode="91"
+                            android:layout_width="wrap_content"
+                            app:ccp_clickable="true"
+                            app:ccp_showFlag="false"
+                            android:gravity="center"
+                            android:textSize="@dimen/_10ssp"
+                            app:ccp_showNameCode="true"
+
+
+                            android:visibility="visible"
+
+                            android:layout_height="match_parent"
+                            />
+
+
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_36sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_toRightOf="@+id/rel_phone_code"
+                        android:background="@drawable/edt_txtbg"
+                        >
+
+                        <com.app.perk99driver.custom.CustomEditTextRegular
+                            android:id="@+id/edt_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:gravity="center"
+                            android:hint="Mobile Number"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_12ssp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/edt_txtbg"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    >
+
+                    <com.app.perk99driver.custom.CustomEditTextRegular
+                        android:id="@+id/edtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:gravity="center"
+
+                        android:hint="Address"
+                        android:textColorHint="@color/hint_color"
+
+                        android:textSize="@dimen/_12ssp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            android:layout_marginTop="@dimen/_35sdp">
+
+            <com.app.perk99driver.custom.CustomButtonTextRegular
+                android:id="@+id/btnSave"
+                style="@style/app_button"
+                android:layout_centerHorizontal="true"
+                android:text="Save"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
