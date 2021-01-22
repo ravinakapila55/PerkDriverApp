@@ -764,18 +764,20 @@ class HomeActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
                         val generalResponse = GeneralResponse(result)
                         val jsonObject = generalResponse.getResponse_object();
                         //  Log.v("jsonObject", "" + jsonObject)
-                        if (jsonObject.getString("status").equals("success")) {
-
+                        if (jsonObject.getString("status").equals("success"))
+                        {
                             lnr_accept_reject.visibility = View.GONE
                             lnr_go_pick_up_screen.visibility=View.GONE
                             lnr_offline.visibility=View.VISIBLE
-                        } else {
-                            CommonMethod.showToast("Some Error Occured");
                         }
-
-                    } catch (ex: java.lang.Exception) {
+                        else
+                        {
+                            CommonMethod.showToast("Some error occured");
+                        }
+                    }
+                    catch (ex: java.lang.Exception)
+                    {
                         CommonMethod.hideProgress()
-
                     }
 
                 },
@@ -785,8 +787,6 @@ class HomeActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
 
                     CommonMethod.hideProgress()
                     CommonMethod.showToast(getString(R.string.server_error))
-
-
                 }
             )
     }
@@ -842,8 +842,8 @@ class HomeActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
 
         btnReject.setOnClickListener({
             dialog!!.dismiss()
-
         })
+
         btn_cancel_job.setOnClickListener({
             dialog!!.dismiss()
 //            cancelJobAPi()
@@ -855,7 +855,6 @@ class HomeActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
 //            completeDailog()
             dopOffApi()
             dialog!!.dismiss()
-
         })
         dialog!!.show()
     }

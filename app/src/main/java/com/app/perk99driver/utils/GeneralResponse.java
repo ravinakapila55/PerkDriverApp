@@ -28,7 +28,8 @@ public class GeneralResponse {
 
     int status_code;
 
-    public GeneralResponse(Response<ResponseBody> rb) {
+    public GeneralResponse(Response<ResponseBody> rb)
+    {
 
         status_code=rb.code();
         this.responseBody = (rb.body() != null) ? rb.body() : rb.errorBody();
@@ -37,7 +38,7 @@ public class GeneralResponse {
             this.response = new JSONObject(responseBody.string());
             Log.e("ddd","ddd "+response);
         } catch (Exception je) {
-
+            je.printStackTrace();
         }
     }
 

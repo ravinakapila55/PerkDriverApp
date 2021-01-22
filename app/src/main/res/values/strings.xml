@@ -53,4 +53,8 @@
     <string name="go_offline">GO Offline</string>
     <string name="you_are_now_offline">You are now offline!</string>
     <string name="you_are_now_online">You are now Online!</string>
+
+
+    <!--google console map  key
+    AIzaSyD5jK52-0H0KltCKumUx0FKAZCvVcUOOII-->
 </resources>
